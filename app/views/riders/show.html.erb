@@ -1,0 +1,8 @@
+<h1>Rider: <%= @rider.name %></h1>
+<h2>Rollercoasters:</h2>
+<ul>
+<% @rider.rollercoasters.each do |r| %>
+    <li><%= r.name %></li>
+<% end %>
+</ul>
+    

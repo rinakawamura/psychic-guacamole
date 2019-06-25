@@ -1,0 +1,12 @@
+<h1>Edit Rider</h1>
+<%= form_for @rider do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br>
+    <%= f.label :rollercoasters %>
+    <br>
+    <%= f.collection_check_boxes :rollercoaster_ids, Rollercoaster.all, :id, :name do |c|%>
+        <%= c.check_box %> <%= c.label %><br>
+    <% end %>
+    <%= f.submit %>
+<% end %>
